@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".65"
+        android:orientation="vertical"
+        android:background="@color/colorLightGrey"
+        tools:ignore="Suspicious0dp">
+        <androidx.appcompat.widget.AppCompatCheckedTextView
+            android:layout_width="wrap_content"
+            android:text="@string/olx"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="84dp"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:layout_marginTop="108dp"
+            android:layout_height="wrap_content">
+        </androidx.appcompat.widget.AppCompatCheckedTextView>
+
+
+        <androidx.appcompat.widget.AppCompatCheckedTextView
+            android:layout_width="wrap_content"
+            android:text="India"
+            android:textColor="@color/colorPrimaryDark"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:layout_height="wrap_content">
+        </androidx.appcompat.widget.AppCompatCheckedTextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".35"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="vertical"
+        android:gravity="center"
+        tools:ignore="Suspicious0dp">
+        <LinearLayout
+            android:id="@+id/lview_google"
+            android:layout_width="280dp"
+            android:orientation="horizontal"
+            android:background="@color/white"
+            android:layout_marginTop="24dp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/google_icon"
+                android:padding="4dp"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:text="@string/continue_with_google"
+
+                android:background="@color/white"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/lview_facebook"
+            android:layout_width="280dp"
+            android:orientation="horizontal"
+            android:background="@color/white"
+            android:layout_marginTop="24dp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/facebook_icon"
+                android:padding="4dp"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:text="@string/continue_with_facebook"
+                android:background="@color/white"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:text="@string/conditions"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:gravity="bottom"
+            android:layout_marginBottom="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            tools:ignore="RtlCompat" />
+
+    </LinearLayout>
+
+</LinearLayout>

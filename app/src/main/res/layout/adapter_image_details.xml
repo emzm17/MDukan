@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_gravity="center|top"
+    android:background="@color/colorLightGrey"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imgview"
+        android:layout_gravity="center"
+        android:scaleType="fitXY"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"/>
+
+</LinearLayout>

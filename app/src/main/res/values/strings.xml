@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Olx</string>
+    <string name="olx">OLX</string>
+    <string name="leading">India\'s Leading\n Market Place</string>
+    <string name="continue_with_google">Continue With google</string>
+    <string name="continue_with_facebook">Continue with Facebook</string>
+    <string name="conditions">If you are accepting\n OLX Terms and Conditionns and Privacy Policy</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home">Home</string>
+    <string name="my_ads">My Ads</string>
+    <string name="sell">Sell</string>
+    <string name="cars_mobile">Buy Cars,Mobile and more....</string>
+    <string name="browse_categories">Browse Categories</string>
+    <string name="what_are_you_offering">What are you offering?</string>
+    <string name="brand">Brand *</string>
+    <string name="mention_the_key_features_of_your_item_e_g_brand_model_age_type">Mention the key features of your item(e.g. brand, model, age, type)</string>
+    <string name="include_the_condition_features_and_reason_for_sale">Include the condition features and reason for sale</string>
+    <string name="describe_the_product">Describe the product *</string>
+    <string name="km_driven">KM Driven *</string>
+    <string name="year">Year *</string>
+    <string name="choose_photo">Choose Photo</string>
+    <string name="_100_00">$ 100.00</string>
+    <string name="phase_6_mohali_sector_56">Phase 6 Mohali Sector 56</string>
+    <string name="suv">SUV</string>
+    <string name="_25_dec">25 DEC</string>
+    <string name="details">Details</string>
+    <string name="description">Description</string>
+    <string name="phone">Phone</string>
+    <string name="version_1_0">version 1.0</string>
+    <string name="you_havent_t_list_anything">You havent\'t List Anything</string>
+    <string name="let_s_go">Let\'s go</string>
+    <string name="north_office_para_ranchi">North Office Para,Ranchi</string>
+
+</resources>

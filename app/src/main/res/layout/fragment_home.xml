@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.Home">
+
+   <LinearLayout
+
+       android:layout_width="match_parent"
+       android:orientation="vertical"
+       android:background="@color/colorLightGrey"
+       android:layout_height="wrap_content">
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:padding="8dp"
+          android:layout_height="wrap_content">
+
+         <ImageView
+             android:id="@+id/ivlocation"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_centerVertical="true"
+             android:padding="4dp"
+             android:src="@drawable/ic_location" />
+
+         <androidx.appcompat.widget.AppCompatTextView
+             android:id="@+id/Tvcityname"
+             android:layout_toEndOf="@id/ivlocation"
+             android:text="Ranchi"
+             android:layout_centerVertical="true"
+             android:textColor="@color/black"
+             android:layout_marginStart="4dp"
+             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"/>
+
+         <ImageView
+             android:padding="4dp"
+             android:id="@+id/ivnotification"
+             android:layout_alignParentEnd="true"
+             android:src="@drawable/ic_notifications_black_24dp"
+             android:layout_width="wrap_content"
+             android:layout_centerVertical="true"
+             android:layout_height="wrap_content"/>
+
+      </RelativeLayout>
+      <LinearLayout
+          android:padding="6dp"
+          android:layout_margin="16dp"
+          android:background="@drawable/box_black_bg_white"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+         <ImageView
+             android:padding="4dp"
+             android:src="@drawable/ic_search"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"/>
+         <androidx.appcompat.widget.AppCompatEditText
+             android:background="@null"
+             android:textColorHint="@color/colorHint"
+             android:singleLine="true"
+             android:textColor="@color/black"
+             android:hint="@string/cars_mobile"
+             android:id="@+id/etsearchview"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"/>
+      </LinearLayout>
+      <LinearLayout
+          android:background="@color/white"
+          android:layout_width="match_parent"
+          android:orientation="vertical"
+          android:layout_height="match_parent">
+         <androidx.appcompat.widget.AppCompatTextView
+             android:layout_marginTop="8dp"
+             android:padding="8dp"
+             android:textColor="@color/black"
+             android:text="@string/browse_categories"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            android:id="@+id/rv_categories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+      </LinearLayout>
+   </LinearLayout>
+
+</LinearLayout>

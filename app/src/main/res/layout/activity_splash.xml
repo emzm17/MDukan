@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimaryDark"
+    android:layout_height="match_parent">
+
+  <androidx.appcompat.widget.AppCompatCheckedTextView
+      android:layout_width="wrap_content"
+      android:text="@string/olx"
+      android:textColor="@color/white"
+      android:textSize="84dp"
+      android:layout_gravity="center"
+      android:textStyle="bold"
+      android:layout_marginTop="108dp"
+      android:layout_height="wrap_content">
+  </androidx.appcompat.widget.AppCompatCheckedTextView>
+
+
+  <androidx.appcompat.widget.AppCompatCheckedTextView
+      android:layout_width="wrap_content"
+      android:text="India"
+      android:textColor="@color/white"
+      android:textAppearance="@style/TextAppearance.AppCompat.Large"
+      android:layout_gravity="center"
+      android:textStyle="bold"
+
+      android:layout_height="wrap_content">
+  </androidx.appcompat.widget.AppCompatCheckedTextView>
+  <androidx.appcompat.widget.AppCompatCheckedTextView
+      android:layout_width="wrap_content"
+      android:text="@string/leading"
+      android:textAlignment="center"
+      android:textColor="@color/white"
+      android:layout_marginTop="24dp"
+      android:textAppearance="@style/TextAppearance.AppCompat"
+      android:layout_gravity="center"
+      android:layout_height="wrap_content">
+  </androidx.appcompat.widget.AppCompatCheckedTextView>
+
+</LinearLayout>

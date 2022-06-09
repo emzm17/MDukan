@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".IncludeDetails">
+
+    <ScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/DarkGrey"/>
+
+      <LinearLayout
+          android:orientation="vertical"
+          android:layout_width="match_parent"
+          android:layout_marginTop="10dp"
+          android:layout_marginStart="6dp"
+          android:layout_marginEnd="6dp"
+          android:layout_height="wrap_content">
+
+          <com.google.android.material.textfield.TextInputLayout
+          android:layout_width="match_parent"
+          android:hint="@string/brand"
+          android:textColorHint="@color/DarkGrey"
+          app:hintTextColor="@color/DarkGrey"
+          android:layout_height="match_parent">
+          <com.google.android.material.textfield.TextInputEditText
+              android:layout_width="match_parent"
+              android:id="@+id/brandEt"
+              android:textColor="@color/black"
+              android:inputType="text"
+              android:layout_height="wrap_content">
+      </com.google.android.material.textfield.TextInputEditText>
+
+      </com.google.android.material.textfield.TextInputLayout>
+          <com.google.android.material.textfield.TextInputLayout
+              android:layout_width="match_parent"
+              android:hint="@string/year"
+              android:textColorHint="@color/DarkGrey"
+              app:hintTextColor="@color/DarkGrey"
+              android:layout_height="match_parent">
+              <com.google.android.material.textfield.TextInputEditText
+                  android:layout_width="match_parent"
+                  android:id="@+id/yearEt"
+                  android:textColor="@color/black"
+                  android:inputType="number"
+                  android:layout_height="wrap_content">
+              </com.google.android.material.textfield.TextInputEditText>
+
+          </com.google.android.material.textfield.TextInputLayout>
+          <com.google.android.material.textfield.TextInputLayout
+              android:layout_width="match_parent"
+              android:hint="@string/km_driven"
+              android:id="@+id/lldriven"
+              android:visibility="gone"
+              android:textColorHint="@color/DarkGrey"
+              app:hintTextColor="@color/DarkGrey"
+              android:layout_height="match_parent">
+              <com.google.android.material.textfield.TextInputEditText
+                  android:layout_width="match_parent"
+                  android:id="@+id/drivenEt"
+                  android:textColor="@color/black"
+                  android:inputType="text"
+                  android:layout_height="wrap_content">
+              </com.google.android.material.textfield.TextInputEditText>
+
+          </com.google.android.material.textfield.TextInputLayout>
+
+          <androidx.appcompat.widget.AppCompatTextView
+              android:layout_marginTop="16dp"
+              android:padding="8dp"
+              android:text="Add Title *"
+              android:textColor="@color/black"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content">
+          </androidx.appcompat.widget.AppCompatTextView>
+          <androidx.appcompat.widget.AppCompatTextView
+              android:padding="8dp"
+              android:text="@string/mention_the_key_features_of_your_item_e_g_brand_model_age_type"
+              android:textColor="@color/black"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content">
+          </androidx.appcompat.widget.AppCompatTextView>
+          <androidx.appcompat.widget.AppCompatEditText
+              android:id="@+id/titleEt"
+              android:textColor="@color/black"
+              android:inputType="text"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+          </androidx.appcompat.widget.AppCompatEditText>
+          <androidx.appcompat.widget.AppCompatTextView
+              android:padding="8dp"
+              android:text="@string/describe_the_product"
+              android:textColor="@color/black"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content">
+          </androidx.appcompat.widget.AppCompatTextView>
+          <androidx.appcompat.widget.AppCompatEditText
+              android:id="@+id/descriptionEt"
+              android:textColor="@color/black"
+              android:inputType="text"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+          </androidx.appcompat.widget.AppCompatEditText>
+
+          <androidx.appcompat.widget.AppCompatTextView
+              android:paddingStart="8dp"
+              android:paddingEnd="8dp"
+              android:text="@string/include_the_condition_features_and_reason_for_sale"
+              android:textColor="@color/black"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content">
+          </androidx.appcompat.widget.AppCompatTextView>
+
+
+          <com.google.android.material.textfield.TextInputLayout
+              android:layout_width="match_parent"
+              android:hint="Price *"
+              android:layout_marginTop="5dp"
+              android:textColorHint="@color/DarkGrey"
+              app:hintTextColor="@color/DarkGrey"
+              android:layout_height="match_parent">
+          <com.google.android.material.textfield.TextInputEditText
+              android:layout_width="match_parent"
+              android:id="@+id/priceEt"
+              android:textColor="@color/black"
+              android:inputType="numberDecimal"
+              android:layout_height="wrap_content">
+          </com.google.android.material.textfield.TextInputEditText>
+          </com.google.android.material.textfield.TextInputLayout>
+          <com.google.android.material.textfield.TextInputLayout
+              android:layout_width="match_parent"
+              android:hint="Address *"
+              android:textColorHint="@color/DarkGrey"
+              app:hintTextColor="@color/DarkGrey"
+              android:layout_height="match_parent">
+              <com.google.android.material.textfield.TextInputEditText
+                  android:layout_width="match_parent"
+                  android:id="@+id/addressEt"
+                  android:textColor="@color/black"
+                  android:inputType="text"
+                  android:layout_height="wrap_content">
+              </com.google.android.material.textfield.TextInputEditText>
+          </com.google.android.material.textfield.TextInputLayout>
+          <com.google.android.material.textfield.TextInputLayout
+              android:layout_width="match_parent"
+              android:hint="Phone Number*"
+              android:textColorHint="@color/DarkGrey"
+              app:hintTextColor="@color/DarkGrey"
+              android:layout_height="match_parent">
+              <com.google.android.material.textfield.TextInputEditText
+                  android:layout_width="match_parent"
+                  android:id="@+id/phone_numberEt"
+                  android:textColor="@color/black"
+                  android:inputType="number"
+                  android:layout_height="wrap_content">
+              </com.google.android.material.textfield.TextInputEditText>
+          </com.google.android.material.textfield.TextInputLayout>
+
+
+<androidx.appcompat.widget.AppCompatTextView
+    android:paddingStart="8dp"
+    android:paddingEnd="8dp"
+    android:text="* Required Fields"
+    android:textColor="@color/black"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"/>
+
+
+
+      </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:gravity="bottom"
+                android:layout_gravity="bottom"
+                android:layout_height="match_parent">
+            </LinearLayout>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:background="@color/colorPrimary"
+                android:padding="12dp"
+                android:text="Next"
+                android:id="@+id/nextTv"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+</LinearLayout>

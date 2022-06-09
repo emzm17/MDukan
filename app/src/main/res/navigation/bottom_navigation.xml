@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/Home">
+
+    <fragment
+        android:id="@+id/Home"
+        android:name="com.example.olx.fragments.Home"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_Home_to_browseItem"
+            app:destination="@id/browseItem" />
+    </fragment>
+    <fragment
+        android:id="@+id/Profile"
+        android:name="com.example.olx.fragments.Profile"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_Profile_to_settings"
+            app:destination="@id/settings" />
+    </fragment>
+    <fragment
+        android:id="@+id/Sell"
+        android:name="com.example.olx.fragments.Sell"
+        android:label="Sell"
+        tools:layout="@layout/fragment_sell" >
+        <action
+            android:id="@+id/action_Sell_to_includeDetails"
+            app:destination="@id/includeDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/MyAds"
+        android:name="com.example.olx.fragments.MyAds"
+        android:label="MyAds"
+        tools:layout="@layout/fragment_my_ads" >
+        <action
+            android:id="@+id/action_MyAds_to_myItemDetails2"
+            app:destination="@id/myItemDetails2" />
+        <action
+            android:id="@+id/action_MyAds_to_Sell"
+            app:destination="@id/Sell" />
+    </fragment>
+    <fragment
+        android:id="@+id/includeDetails"
+        android:name="com.example.olx.IncludeDetails"
+        android:label="IncludeDetails"
+        tools:layout="@layout/fragment_include_details" >
+        <action
+            android:id="@+id/action_includeDetails_to_uploadImage"
+            app:destination="@id/uploadImage" />
+        <argument
+            android:name="key"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/uploadImage"
+        android:name="com.example.olx.fragments.UploadImage"
+        android:label="UploadImage"
+        tools:layout="@layout/fragment_upload_image" >
+        <argument
+            android:name="item"
+            app:argType="com.example.olx.modal.Item" />
+        <action
+            android:id="@+id/action_uploadImage_to_Sell"
+            app:destination="@id/Sell" />
+    </fragment>
+    <fragment
+        android:id="@+id/details"
+        android:name="com.example.olx.fragments.Details"
+        android:label="Details" >
+        <argument
+            android:name="sItem"
+            app:argType="com.example.olx.modal.SItem" />
+    </fragment>
+    <fragment
+        android:id="@+id/browseItem"
+        android:name="com.example.olx.fragments.BrowseItem"
+        android:label="BrowseItem"
+        tools:layout="@layout/fragment_browse_item" >
+        <argument
+            android:name="key"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_browseItem_to_details"
+            app:destination="@id/details" />
+    </fragment>
+    <fragment
+        android:id="@+id/settings"
+        android:name="com.example.olx.fragments.Settings"
+        android:label="Settings" >
+        <action
+            app:popUpTo="@id/settings"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpToInclusive="true"
+            android:id="@+id/action_settings_to_Profile"
+            app:destination="@id/Profile" />
+    </fragment>
+    <fragment
+        android:id="@+id/myItemDetails2"
+        android:name="com.example.olx.fragments.MyItemDetails"
+        android:label="MyItemDetails" >
+        <argument
+            android:name="sItem"
+            app:argType="com.example.olx.modal.SItem" />
+        <action
+            android:id="@+id/action_myItemDetails2_to_MyAds"
+            app:destination="@id/MyAds" />
+    </fragment>
+
+
+</navigation>

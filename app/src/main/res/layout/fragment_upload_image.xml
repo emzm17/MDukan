@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.UploadImage">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+       <LinearLayout
+           android:orientation="vertical"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+                  <LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_margin="8dp"
+                      android:orientation="vertical">
+                      <androidx.cardview.widget.CardView
+                          app:cardBackgroundColor="@color/colorLightGrey"
+                          app:cardCornerRadius="4dp"
+                          app:cardElevation="8dp"
+                          android:layout_width="match_parent"
+                          android:layout_height="320dp">
+                           <ImageView
+                               android:id="@+id/imgview"
+                               android:src="@drawable/ic_placeholder"
+                               android:layout_width="match_parent"
+                               android:layout_height="match_parent"/>
+
+                      </androidx.cardview.widget.CardView>
+                      <LinearLayout
+                          android:background="@drawable/box_grey_bg_white"
+                          android:layout_marginTop="34dp"
+                          android:layout_marginEnd="8dp"
+                          android:layout_marginStart="8dp"
+                          android:layout_width="match_parent"
+                          android:layout_height="120dp">
+                          <androidx.appcompat.widget.AppCompatTextView
+                              android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:textColor="@color/black"
+                              android:text="Upload Images (Minimuim 1 image) "
+                              android:background="@color/white"
+                              android:gravity="center">
+                          </androidx.appcompat.widget.AppCompatTextView>
+
+                      </LinearLayout>
+                  </LinearLayout>
+           <RelativeLayout
+               android:layout_marginStart="16dp"
+               android:layout_marginEnd="8dp"
+               android:layout_marginTop="18dp"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+
+               <androidx.appcompat.widget.AppCompatButton
+                   android:id="@+id/previewbtn"
+                   android:layout_width="160dp"
+                   android:layout_height="wrap_content"
+                   android:background="@drawable/box_blue_bg_white"
+                   android:text="@string/choose_photo"
+                   android:textAllCaps="false"
+                   android:textColor="@color/colorPrimary" />
+
+               <androidx.appcompat.widget.AppCompatButton
+                   android:id="@+id/uploadbtn"
+                   android:layout_width="160dp"
+                   android:layout_height="wrap_content"
+                   android:layout_alignParentEnd="true"
+                   android:background="@drawable/box_blue_bg_blue"
+                   android:text="Upload"
+                   android:textAllCaps="false"
+                   android:textColor="@color/white" />
+           </RelativeLayout>
+       </LinearLayout>
+
+
+</ScrollView>
+</LinearLayout>
