@@ -99,7 +99,6 @@ class MyItemDetails : BaseFragment(),DetailsImageAdapter.itemClickListener {
     }
 
     private fun data() {
-        val sdf= SimpleDateFormat("dd/MM/yyyy")
         MItvPrice.text = args.sItem.price
         MItvTitle.text = args.sItem.title
         MItvBrand.text = args.sItem.brand
@@ -109,7 +108,7 @@ class MyItemDetails : BaseFragment(),DetailsImageAdapter.itemClickListener {
         MItvKmDriven.text=args.sItem.driven
 
         MItvYear.text=args.sItem.year
-        MItvDate.text=sdf.format(args.sItem.createdAt!!.time)
+        McityTv.text=args.sItem.city
     }
 
     override fun onItemClick(position: Int) {

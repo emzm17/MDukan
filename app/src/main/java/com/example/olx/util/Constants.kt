@@ -5,6 +5,7 @@ import com.example.olx.modal.Categories
 
 object Constants {
 
+    val CITY_NAME:String="City_name"
     val USER_ADDRESS:String ="Address"
     val IMAGE_URL: String="Image_url"
     val KEY:String="key"
@@ -27,5 +28,6 @@ object Constants {
     val SharedPreferences="OLX"
     val CATEGORIES="Categories"
     val USER_PHONE="Phone"
+    val REQUEST_PERMISSION_CODE=123
 
 }

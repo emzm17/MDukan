@@ -5,11 +5,13 @@ import android.annotation.SuppressLint
 import android.content.ClipData
 import android.content.Intent
 import android.database.Cursor
+import android.location.Geocoder
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.provider.MediaStore
 import android.util.Log
+import android.view.View
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.navigation.NavController
@@ -19,14 +21,20 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.olx.util.Constants
 import com.example.olx.util.OnActivityResultData
+import com.google.android.gms.maps.GoogleMap
+import com.google.android.gms.maps.OnMapReadyCallback
+import com.google.android.gms.maps.SupportMapFragment
+import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.MarkerOptions
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import java.io.File
+import java.lang.Exception
 
 
-class MainActivity : BaseActivity() {
+class MainActivity : BaseActivity(){
     lateinit var onActivityResultData: OnActivityResultData
     private lateinit var navController: NavController
     private lateinit var bottomNavigationView: BottomNavigationView
@@ -40,7 +48,7 @@ class MainActivity : BaseActivity() {
         setupActionBarWithNavController(navController,appBarConfiguration)
         bottomNavigationView = findViewById(R.id.bottom_navigation_view)
         bottomNavigationView.setupWithNavController(navController)
-
+       
     }
 
     override fun onSupportNavigateUp(): Boolean {
@@ -72,5 +80,4 @@ class MainActivity : BaseActivity() {
                     }
 
               }
-
 }

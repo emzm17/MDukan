@@ -65,11 +65,12 @@
             android:name="item"
             app:argType="com.example.olx.modal.Item" />
         <action
-            android:id="@+id/action_uploadImage_to_Sell"
-            app:destination="@id/Sell" />
+            android:id="@+id/action_uploadImage_to_MyAds"
+            app:destination="@id/MyAds" />
     </fragment>
     <fragment
         android:id="@+id/details"
+        tools:layout="@layout/item_details_2"
         android:name="com.example.olx.fragments.Details"
         android:label="Details" >
         <argument

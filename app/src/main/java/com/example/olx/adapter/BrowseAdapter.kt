@@ -10,7 +10,11 @@ import com.bumptech.glide.Glide
 import com.example.olx.R
 import com.example.olx.modal.Item
 import com.example.olx.modal.SItem
+import com.example.olx.util.Constants
+import com.example.olx.util.SharedPref
 import kotlinx.android.synthetic.main.ads_item.view.*
+import kotlinx.android.synthetic.main.all_item_list.view.*
+import kotlinx.android.synthetic.main.item_details_3.view.*
 import java.text.SimpleDateFormat
 
 
@@ -18,7 +22,7 @@ class BrowseAdapter(private val context: Context, private var myList: MutableLis
     RecyclerView.Adapter<BrowseAdapter.BrowseAdapterViewModel>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BrowseAdapterViewModel {
-        val v= LayoutInflater.from(context).inflate(R.layout.ads_item,parent,false)
+        val v= LayoutInflater.from(context).inflate(R.layout.item_details_3,parent,false)
         return BrowseAdapterViewModel(v)
     }
 
@@ -44,12 +48,12 @@ class BrowseAdapter(private val context: Context, private var myList: MutableLis
 
         @SuppressLint("SetTextI18n")
         fun bind(item: SItem)=with(itemView){
-            itemView.spriceTv.text="Rs${item.price}"
-            itemView.sAddressTv.text=item.address
-            itemView.sbrandTv.text=item.brand
-            itemView.sdateTv.text= sdf.format(item.createdAt!!.time)
-            Glide.with(context).load(item.imagelist).placeholder(R.drawable.ic_placeholder).into(itemView.sell_imageview)
-
+             itemView.tvPrice.text="₹${item.price}"
+             itemView.tvDetails.text=item.brand!!.capitalize()
+             itemView.tvYear.text=item.year+"-Till Now"
+             itemView.tvcity.text=item.city+","
+             itemView.tvState.text="Jharkhand"
+            Glide.with(this).load(item.imagelist).into(itemView.ImageViewItem);
         }
     }
     interface ItemClickListener{

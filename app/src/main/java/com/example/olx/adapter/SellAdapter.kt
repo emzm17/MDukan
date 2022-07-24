@@ -33,6 +33,7 @@ class SellAdapter(private var context: Context,private var categoryList:MutableL
                    .placeholder(R.drawable.ic_placeholder)
                    .into(ivIcon)
                tvTitle.text=item.key
+
            }
     }
     interface ItemClickListener{

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/CardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dp_6"
+    app:cardCornerRadius="@dimen/dp_5"
+    android:elevation="@dimen/dp_60">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ImgAllCoverPhoto"
+            android:layout_width="373dp"
+            android:layout_height="136dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:scaleType="fitCenter" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tvAllPrice"
+                android:text="₹ 10000"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginEnd="@dimen/dp_15"
+                android:fontFamily="@font/sniglet"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_20" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvAllTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_5"
+            android:maxLines="2"
+            android:fontFamily="@font/sniglet"
+            android:text="Maruti Suzuki Celerio "
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_12" />
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_8"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/location"
+                android:layout_width="@dimen/dp_10"
+                android:layout_height="@dimen/dp_10"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_2"
+                android:src="@drawable/ic_location" />
+
+            <TextView
+                android:id="@+id/tvAllTown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_2"
+                android:layout_toEndOf="@id/location"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_10" />
+
+            <TextView
+                android:id="@+id/tvAllCity"
+                android:text="Ranchi, Jharkhand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/tvAllTown"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:layout_marginBottom="2dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_10" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/dp_35"
+        app:cardCornerRadius="40dp"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_gravity="end"
+        android:layout_height="@dimen/dp_35">
+
+        <ImageView
+            android:id="@+id/ivAllHeart"
+            android:layout_width="15dp"
+            android:layout_height="22dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_heart_unselected" />
+    </androidx.cardview.widget.CardView>
+</androidx.cardview.widget.CardView>

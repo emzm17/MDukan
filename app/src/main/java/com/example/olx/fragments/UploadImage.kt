@@ -185,7 +185,7 @@ class UploadImage : BaseFragment(),View.OnClickListener,UploadImageAdapter.ItemC
         val s= SItem(args.item.price,args.item.brand,args.item.address,args.item.year,args.item.driven,
             args.item.title,args.item.description,args.item.phone,args.item.type,docId,
                user_id!!,
-            Date(),imageUrilist)
+            Date(),imageUrilist,SharedPref(requireContext()).getString(Constants.CITY_NAME))
 
         DB.collection(args.item.type.toString())
             .add(s)
@@ -208,7 +208,7 @@ class UploadImage : BaseFragment(),View.OnClickListener,UploadImageAdapter.ItemC
             .update(docData as Map<String, Any>).addOnSuccessListener {
                 Toast.makeText(requireContext(), "Ad Posted Successfully", Toast.LENGTH_LONG).show()
             }
-         val action=UploadImageDirections.actionUploadImageToSell()
+         val action=UploadImageDirections.actionUploadImageToMyAds()
           findNavController().navigate(action)
     }
 

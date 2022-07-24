@@ -1,5 +1,6 @@
 package com.example.olx.fragments
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -7,6 +8,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ShareActionProvider
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
@@ -14,6 +16,8 @@ import com.example.olx.BaseFragment
 import com.example.olx.R
 import com.example.olx.adapter.CategoryAdapter
 import com.example.olx.modal.Categories
+import com.example.olx.util.Constants
+import com.example.olx.util.SharedPref
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.fragment_home.*
@@ -32,11 +36,13 @@ class Home : BaseFragment(),CategoryAdapter.ItemClickListener {
        return root
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         db= FirebaseFirestore.getInstance()
         getCategoryList()
         textListener()
+        Tvcityname.text=SharedPref(requireContext()).getString(Constants.CITY_NAME)
     }
 
     private fun textListener() {

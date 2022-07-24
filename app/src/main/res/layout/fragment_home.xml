@@ -27,14 +27,15 @@
 
          <androidx.appcompat.widget.AppCompatTextView
              android:id="@+id/Tvcityname"
+             android:layout_width="wrap_content"
+             android:fontFamily="@font/sniglet"
+             android:layout_height="wrap_content"
+             android:layout_centerVertical="true"
+             android:layout_marginStart="4dp"
              android:layout_toEndOf="@id/ivlocation"
              android:text="Ranchi"
-             android:layout_centerVertical="true"
-             android:textColor="@color/black"
-             android:layout_marginStart="4dp"
              android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"/>
+             android:textColor="@color/black" />
 
          <ImageView
              android:padding="4dp"
@@ -64,6 +65,7 @@
              android:textColor="@color/black"
              android:hint="@string/cars_mobile"
              android:id="@+id/etsearchview"
+             android:fontFamily="@font/sniglet"
              android:layout_width="match_parent"
              android:layout_height="match_parent"/>
       </LinearLayout>
@@ -75,6 +77,7 @@
          <androidx.appcompat.widget.AppCompatTextView
              android:layout_marginTop="8dp"
              android:padding="8dp"
+             android:fontFamily="@font/sniglet"
              android:textColor="@color/black"
              android:text="@string/browse_categories"
              android:layout_width="wrap_content"

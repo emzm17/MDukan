@@ -16,21 +16,22 @@
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
-            android:background="@color/colorPrimary"
-            app:titleTextColor="@color/white"
+            android:visibility="visible"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            app:titleTextColor="@color/white" />
 
 
         <fragment
-           android:id="@+id/container_fragment"
+            android:id="@+id/container_fragment"
             android:name="androidx.navigation.fragment.NavHostFragment"
             android:layout_width="match_parent"
-            android:layout_below="@id/toolbar"
             android:layout_height="676dp"
-            app:defaultNavHost="true"
             android:layout_above="@id/bottom_navigation_view"
-             app:navGraph="@navigation/bottom_navigation" />
+            android:layout_below="@id/toolbar"
+            app:defaultNavHost="true"
+            app:navGraph="@navigation/bottom_navigation" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation_view"

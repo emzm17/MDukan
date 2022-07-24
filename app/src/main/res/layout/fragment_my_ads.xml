@@ -28,6 +28,7 @@
           android:textColor="@android:color/black"
           android:padding="8dp"
           android:textStyle="bold"
+          android:fontFamily="@font/sniglet"
           android:textAppearance="@style/TextAppearance.AppCompat.Medium"
           android:text="@string/you_havent_t_list_anything">
 
@@ -49,7 +50,7 @@
           android:id="@+id/buttonPost"
           android:layout_gravity="center"
           android:text="Post"
-          android:background="@color/colorPrimaryDark"
+          android:background="@color/colorPrimary"
           android:textColor="@android:color/white"
           android:textStyle="bold">
       </androidx.appcompat.widget.AppCompatButton>

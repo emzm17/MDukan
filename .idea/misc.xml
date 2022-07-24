@@ -5,6 +5,7 @@
       <map>
         <entry key="..\:/Users/Dibya Ranjan/Desktop/Projects/Olx/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.214" />
         <entry key="..\:/Users/Dibya Ranjan/Desktop/Projects/Olx/app/src/main/res/drawable/arrow_right.xml" value="0.214" />
+        <entry key="..\:/Users/Dibya Ranjan/Desktop/Projects/Olx/app/src/main/res/drawable/backarrow.xml" value="0.3435" />
         <entry key="..\:/Users/Dibya Ranjan/Desktop/Projects/Olx/app/src/main/res/drawable/box_black_bg_white.xml" value="0.214" />
         <entry key="..\:/Users/Dibya Ranjan/Desktop/Projects/Olx/app/src/main/res/drawable/box_blue_bg_blue.xml" value="0.214" />
         <entry key="..\:/Users/Dibya Ranjan/Desktop/Projects/Olx/app/src/main/res/drawable/box_blue_bg_white.xml" value="0.214" />
@@ -15,9 +16,11 @@
         <entry key="..\:/Users/Dibya Ranjan/Desktop/Projects/Olx/app/src/main/res/drawable/ic_add_photo.xml" value="0.214" />
         <entry key="..\:/Users/Dibya Ranjan/Desktop/Projects/Olx/app/src/main/res/drawable/ic_ads.xml" value="0.214" />
         <entry key="..\:/Users/Dibya Ranjan/Desktop/Projects/Olx/app/src/main/res/drawable/ic_arrow_back.xml" value="0.214" />
+        <entry key="..\:/Users/Dibya Ranjan/Desktop/Projects/Olx/app/src/main/res/drawable/ic_back.xml" value="0.196" />
         <entry key="..\:/Users/Dibya Ranjan/Desktop/Projects/Olx/app/src/main/res/drawable/ic_chevron_left.xml" value="0.214" />
         <entry key="..\:/Users/Dibya Ranjan/Desktop/Projects/Olx/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.214" />
         <entry key="..\:/Users/Dibya Ranjan/Desktop/Projects/Olx/app/src/main/res/drawable/ic_exit.xml" value="0.214" />
+        <entry key="..\:/Users/Dibya Ranjan/Desktop/Projects/Olx/app/src/main/res/drawable/ic_heart_unselected.xml" value="0.197" />
         <entry key="..\:/Users/Dibya Ranjan/Desktop/Projects/Olx/app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.214" />
         <entry key="..\:/Users/Dibya Ranjan/Desktop/Projects/Olx/app/src/main/res/drawable/ic_launcher_background.xml" value="0.214" />
         <entry key="..\:/Users/Dibya Ranjan/Desktop/Projects/Olx/app/src/main/res/drawable/ic_location.xml" value="0.214" />
@@ -26,6 +29,11 @@
         <entry key="..\:/Users/Dibya Ranjan/Desktop/Projects/Olx/app/src/main/res/drawable/ic_search.xml" value="0.214" />
         <entry key="..\:/Users/Dibya Ranjan/Desktop/Projects/Olx/app/src/main/res/drawable/ic_sell.xml" value="0.214" />
         <entry key="..\:/Users/Dibya Ranjan/Desktop/Projects/Olx/app/src/main/res/drawable/ic_settings.xml" value="0.214" />
+        <entry key="..\:/Users/Dibya Ranjan/Desktop/Projects/Olx/app/src/main/res/drawable/ic_shopping_bag.xml" value="0.209" />
+        <entry key="..\:/Users/Dibya Ranjan/Desktop/Projects/Olx/app/src/main/res/drawable/image_selector.xml" value="0.196" />
+        <entry key="..\:/Users/Dibya Ranjan/Desktop/Projects/Olx/app/src/main/res/drawable/rectangle_bg.xml" value="0.196" />
+        <entry key="..\:/Users/Dibya Ranjan/Desktop/Projects/Olx/app/src/main/res/drawable/search_bg.xml" value="0.197" />
+        <entry key="..\:/Users/Dibya Ranjan/Desktop/Projects/Olx/app/src/main/res/font/amiri.xml" value="0.3648148148148148" />
         <entry key="..\:/Users/Dibya Ranjan/Desktop/Projects/Olx/app/src/main/res/layout/activity_image_preview.xml" value="0.26666666666666666" />
         <entry key="..\:/Users/Dibya Ranjan/Desktop/Projects/Olx/app/src/main/res/layout/activity_login.xml" value="0.33" />
         <entry key="..\:/Users/Dibya Ranjan/Desktop/Projects/Olx/app/src/main/res/layout/activity_main.xml" value="0.3625" />
@@ -33,6 +41,7 @@
         <entry key="..\:/Users/Dibya Ranjan/Desktop/Projects/Olx/app/src/main/res/layout/adapter_image.xml" value="0.3625" />
         <entry key="..\:/Users/Dibya Ranjan/Desktop/Projects/Olx/app/src/main/res/layout/adapter_image_details.xml" value="0.35833333333333334" />
         <entry key="..\:/Users/Dibya Ranjan/Desktop/Projects/Olx/app/src/main/res/layout/ads_item.xml" value="0.3625" />
+        <entry key="..\:/Users/Dibya Ranjan/Desktop/Projects/Olx/app/src/main/res/layout/all_item_list.xml" value="0.3625" />
         <entry key="..\:/Users/Dibya Ranjan/Desktop/Projects/Olx/app/src/main/res/layout/bottomsheet.xml" value="0.35833333333333334" />
         <entry key="..\:/Users/Dibya Ranjan/Desktop/Projects/Olx/app/src/main/res/layout/details_item.xml" value="0.3625" />
         <entry key="..\:/Users/Dibya Ranjan/Desktop/Projects/Olx/app/src/main/res/layout/dialog_progress.xml" value="0.3625" />
@@ -41,6 +50,7 @@
         <entry key="..\:/Users/Dibya Ranjan/Desktop/Projects/Olx/app/src/main/res/layout/fragment_details_item.xml" value="0.33" />
         <entry key="..\:/Users/Dibya Ranjan/Desktop/Projects/Olx/app/src/main/res/layout/fragment_home.xml" value="0.3554987212276215" />
         <entry key="..\:/Users/Dibya Ranjan/Desktop/Projects/Olx/app/src/main/res/layout/fragment_include_details.xml" value="0.33" />
+        <entry key="..\:/Users/Dibya Ranjan/Desktop/Projects/Olx/app/src/main/res/layout/fragment_location.xml" value="0.3625" />
         <entry key="..\:/Users/Dibya Ranjan/Desktop/Projects/Olx/app/src/main/res/layout/fragment_my_ads.xml" value="0.3625" />
         <entry key="..\:/Users/Dibya Ranjan/Desktop/Projects/Olx/app/src/main/res/layout/fragment_my_item_details.xml" value="0.3625" />
         <entry key="..\:/Users/Dibya Ranjan/Desktop/Projects/Olx/app/src/main/res/layout/fragment_profile.xml" value="0.3625" />
@@ -48,6 +58,8 @@
         <entry key="..\:/Users/Dibya Ranjan/Desktop/Projects/Olx/app/src/main/res/layout/fragment_settings.xml" value="0.3625" />
         <entry key="..\:/Users/Dibya Ranjan/Desktop/Projects/Olx/app/src/main/res/layout/fragment_upload_image.xml" value="0.3625" />
         <entry key="..\:/Users/Dibya Ranjan/Desktop/Projects/Olx/app/src/main/res/layout/griditem.xml" value="0.3625" />
+        <entry key="..\:/Users/Dibya Ranjan/Desktop/Projects/Olx/app/src/main/res/layout/item_details_2.xml" value="0.3625" />
+        <entry key="..\:/Users/Dibya Ranjan/Desktop/Projects/Olx/app/src/main/res/layout/item_details_3.xml" value="0.3625" />
         <entry key="..\:/Users/Dibya Ranjan/Desktop/Projects/Olx/app/src/main/res/layout/sellitem.xml" value="0.3625" />
         <entry key="..\:/Users/Dibya Ranjan/Desktop/Projects/Olx/app/src/main/res/menu/bottom_menu.xml" value="0.3625" />
         <entry key="..\:/Users/Dibya Ranjan/Desktop/Projects/Olx/app/src/main/res/menu/bottomnavi.xml" value="0.3625" />

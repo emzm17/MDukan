@@ -19,5 +19,6 @@ data class SItem(
     val id:String?=null,
     val user_id:String?=null,
     val createdAt: Date?=null,
-    val imagelist:String?=null
+    val imagelist:String?=null,
+    val city:String?=null
 ): Parcelable

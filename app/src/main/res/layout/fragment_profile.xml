@@ -28,13 +28,14 @@
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvName"
                 android:layout_width="wrap_content"
+                android:fontFamily="@font/sniglet"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="6dp"
                 android:layout_marginTop="20dp"
                 android:layout_toEndOf="@+id/profile_pic"
                 android:paddingStart="8dp"
-                android:text="Dibya Ranjan Barwa"
                 android:paddingEnd="8dp"
+                android:text="Dibya Ranjan Barwa"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@android:color/black"
                 android:textStyle="bold">
@@ -42,18 +43,19 @@
             </androidx.appcompat.widget.AppCompatTextView>
 
             <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvEmail"
+                android:fontFamily="@font/sniglet"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/tvName"
-                android:layout_marginTop="5dp"
                 android:layout_marginStart="6dp"
+                android:layout_marginTop="5dp"
                 android:layout_toEndOf="@+id/profile_pic"
                 android:paddingStart="8dp"
                 android:paddingEnd="8dp"
-                android:id="@+id/tvEmail"
                 android:text="dibyxxxxxxxxx"
-                android:textSize="16dp"
                 android:textColor="@android:color/black"
+                android:textSize="16dp"
                 tools:ignore="UnknownId">
 
             </androidx.appcompat.widget.AppCompatTextView>
@@ -94,7 +96,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingLeft="10dp"
-                    android:text="settings"
+                    android:text="Settings"
+                    android:fontFamily="@font/sniglet"
                     android:textColor="@android:color/black"
                     android:textStyle="bold" />
 
@@ -141,8 +144,9 @@
                     style="@style/TextAppearance.AppCompat.Small"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/sniglet"
                     android:paddingLeft="10dp"
-                    android:text="logout"
+                    android:text="Logout"
                     android:textColor="@android:color/black"
                     android:textStyle="bold" />
 
@@ -164,6 +168,96 @@
             android:background="@android:color/darker_gray" />
 
     </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llMyInventory"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight=".1"
+            android:src="@drawable/ic_shopping_bag" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight=".8"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sniglet"
+                android:paddingLeft="10dp"
+                android:text="My Inventory"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight=".1"
+            android:src="@drawable/arrow_right" />
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray" />
+    <LinearLayout
+        android:id="@+id/llMyOrder"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight=".1"
+            android:src="@drawable/ic_shopping_bag" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight=".8"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sniglet"
+                android:paddingLeft="10dp"
+                android:text="My Orders"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight=".1"
+            android:src="@drawable/arrow_right" />
+
+    </LinearLayout>
+
 
     <RelativeLayout
         android:layout_width="match_parent"

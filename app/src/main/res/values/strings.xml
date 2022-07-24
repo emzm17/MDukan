@@ -13,12 +13,12 @@
     <string name="cars_mobile">Buy Cars,Mobile and more....</string>
     <string name="browse_categories">Browse Categories</string>
     <string name="what_are_you_offering">What are you offering?</string>
-    <string name="brand">Brand *</string>
-    <string name="mention_the_key_features_of_your_item_e_g_brand_model_age_type">Mention the key features of your item(e.g. brand, model, age, type)</string>
+    <string name="brand">(Write full Brand name with model Name)*</string>
+    <string name="mention_the_key_features_of_your_item_e_g_brand_model_age_type">Mention the key features of your item</string>
     <string name="include_the_condition_features_and_reason_for_sale">Include the condition features and reason for sale</string>
     <string name="describe_the_product">Describe the product *</string>
     <string name="km_driven">KM Driven *</string>
-    <string name="year">Year *</string>
+    <string name="year">Purchase Year *</string>
     <string name="choose_photo">Choose Photo</string>
     <string name="_100_00">$ 100.00</string>
     <string name="phase_6_mohali_sector_56">Phase 6 Mohali Sector 56</string>

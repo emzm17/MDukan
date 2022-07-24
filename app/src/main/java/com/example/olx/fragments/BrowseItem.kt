@@ -1,6 +1,8 @@
 package com.example.olx.fragments
 
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,6 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.olx.BaseFragment
 import com.example.olx.R
 import com.example.olx.adapter.BrowseAdapter
+import com.example.olx.modal.Categories
 import com.example.olx.modal.Item
 import com.example.olx.modal.SItem
 import com.example.olx.util.Constants
@@ -37,7 +40,28 @@ class BrowseItem :  BaseFragment(),BrowseAdapter.ItemClickListener {
         DB= FirebaseFirestore.getInstance()
         rv_browse.layoutManager=LinearLayoutManager(requireContext())
         retrivelist()
+       // textListener()
     }
+
+    /*
+    private fun textListener() {
+        betsearchview.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                return
+            }
+
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                return
+            }
+
+            override fun afterTextChanged(p0: Editable?) {
+                filterList(p0.toString())
+            }
+
+        })
+    }
+    */
+
 
     private fun retrivelist() {
         list.clear()

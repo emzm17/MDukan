@@ -11,7 +11,8 @@ import com.example.olx.R
 import com.example.olx.modal.Categories
 import kotlinx.android.synthetic.main.griditem.view.*
 
-class CategoryAdapter(private val context: Context, private var categoryList:MutableList<Categories>, private val itemClickListener:ItemClickListener): RecyclerView.Adapter<CategoryAdapter.AdapterViewModel>() {
+class CategoryAdapter(private val context: Context, private var categoryList:MutableList<Categories>,
+                      private val itemClickListener:ItemClickListener): RecyclerView.Adapter<CategoryAdapter.AdapterViewModel>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AdapterViewModel {
         val v=LayoutInflater.from(context).inflate(R.layout.griditem,parent,false)

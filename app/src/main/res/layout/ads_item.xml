@@ -38,14 +38,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/sAddressTv"
-            android:textAppearance="@style/TextAppearance.AppCompat.Small"
-            android:textColor="@color/black"
-            android:text="142 Patel Chowk ,Niraml Ghar"
-            android:layout_marginStart="4dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/sbrandTv"
             android:textAppearance="@style/TextAppearance.AppCompat.Small"
             android:textColor="@color/black"
@@ -54,14 +46,35 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/sdateTv"
+            android:id="@+id/syearTv"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/black"
+            android:text="142 Patel Chowk ,Niraml Ghar"
+            android:layout_marginStart="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+         <LinearLayout
+             android:orientation="horizontal"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+             <ImageView
+                 android:src="@drawable/ic_location"
+                 android:layout_width="wrap_content"
+                 android:layout_gravity="bottom"
+                 android:layout_marginBottom="5dp"
+                 android:layout_height="15dp"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/scityTv"
             android:textAppearance="@style/TextAppearance.AppCompat.Small"
             android:textColor="@color/black"
             android:text="Yesterday"
             android:layout_marginStart="4dp"
-            android:layout_gravity="end"
             android:layout_marginTop="8dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
+         </LinearLayout>
+
     </LinearLayout>
 </LinearLayout>

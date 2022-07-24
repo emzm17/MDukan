@@ -54,8 +54,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="4dp"
-                    android:layout_marginTop="4dp"
+
                     android:maxLines="1"
+                    android:textStyle="bold"
                     android:text="North Office Para,Ranchi"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                     android:textColor="@android:color/black">
@@ -67,26 +68,34 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="4dp"
-                    android:layout_marginTop="4dp"
                     android:maxLines="1"
                     android:text="Audi"
+                    android:textStyle="bold"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                     android:textColor="@android:color/black">
 
                 </androidx.appcompat.widget.AppCompatTextView>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/MItvDate"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end"
-                    android:layout_marginStart="4dp"
-                    android:layout_marginTop="10dp"
-                    android:text="@string/_25_dec"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                    android:textColor="@color/black">
-
-                </androidx.appcompat.widget.AppCompatTextView>
+                    <ImageView
+                        android:src="@drawable/ic_location"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginBottom="5dp"
+                        android:layout_height="19dp"/>
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/McityTv"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/black"
+                        android:text="Yesterday"
+                        android:textStyle="bold"
+                        android:layout_marginStart="4dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
 
             </LinearLayout>
 

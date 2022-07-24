@@ -12,13 +12,11 @@
         android:layout_height="wrap_content">
 
         <de.hdodenhof.circleimageview.CircleImageView
-            xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/ivIcon"
             android:layout_width="84dp"
             android:layout_height="84dp"
             android:layout_gravity="center"
             android:src="@drawable/car"/>
-
         <androidx.appcompat.widget.AppCompatTextView
             android:text="Car"
             android:id="@+id/tvTitle"

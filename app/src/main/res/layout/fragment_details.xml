@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -28,7 +29,8 @@
                     android:layout_width="400dp"
                     android:layout_height="300dp"
                     android:layout_gravity="center"
-                    android:layout_margin="10dp" />
+                    android:layout_margin="10dp"
+                    tools:ignore="MissingClass" />
             </FrameLayout>
 
 
@@ -46,7 +48,8 @@
                     android:text="@string/_100_00"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
                     android:textColor="@android:color/black"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    tools:ignore="MissingClass" />
 
 
                 <androidx.appcompat.widget.AppCompatTextView
@@ -54,11 +57,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="4dp"
-                    android:layout_marginTop="4dp"
                     android:maxLines="1"
                     android:text="@string/phase_6_mohali_sector_56"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:textColor="@android:color/black">
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold">
 
                 </androidx.appcompat.widget.AppCompatTextView>
 
@@ -67,27 +70,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="4dp"
-                    android:layout_marginTop="4dp"
                     android:maxLines="1"
                     android:text="@string/suv"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:textColor="@android:color/black">
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold">
 
                 </androidx.appcompat.widget.AppCompatTextView>
-
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/tvDate"
-                    android:textColor="@color/black"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end"
-                    android:layout_marginStart="4dp"
-                    android:layout_marginTop="10dp"
-                    android:text="@string/_25_dec"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small">
-
-                </androidx.appcompat.widget.AppCompatTextView>
-
             </LinearLayout>
 
             <View
@@ -297,19 +286,20 @@
 
 
             </androidx.appcompat.widget.LinearLayoutCompat>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@android:color/darker_gray" />
         </LinearLayout>
-
-
     </ScrollView>
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/buttonCall"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="35dp"
         android:layout_alignParentBottom="true"
         android:background="@color/colorPrimaryDark"
         android:gravity="center"
-        android:padding="12dp"
         android:text="Call"
         android:textAllCaps="true"
         android:textAppearance="@style/TextAppearance.AppCompat.Small"

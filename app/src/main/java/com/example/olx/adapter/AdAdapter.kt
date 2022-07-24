@@ -11,6 +11,8 @@ import com.example.olx.R
 import com.example.olx.modal.Categories
 import com.example.olx.modal.Item
 import com.example.olx.modal.SItem
+import com.example.olx.util.Constants
+import com.example.olx.util.SharedPref
 import kotlinx.android.synthetic.main.ads_item.view.*
 import kotlinx.android.synthetic.main.griditem.view.*
 import java.text.SimpleDateFormat
@@ -46,10 +48,10 @@ class AdAdapter(private val context: Context, private var myList:MutableList<SIt
 
         @SuppressLint("SetTextI18n")
         fun bind(item: SItem)=with(itemView){
-            itemView.spriceTv.text="Rs${item.price}"
-            itemView.sAddressTv.text=item.address
+            itemView.spriceTv.text="₹ ${item.price}"
             itemView.sbrandTv.text=item.brand
-            itemView.sdateTv.text= sdf.format(item.createdAt!!.time)
+            itemView.syearTv.text=item.year
+            itemView.scityTv.text=item.city
             Glide.with(context).load(item.imagelist).placeholder(R.drawable.ic_placeholder).into(itemView.sell_imageview)
 
         }
