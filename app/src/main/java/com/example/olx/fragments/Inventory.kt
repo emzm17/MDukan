@@ -16,6 +16,7 @@ import com.example.olx.util.Constants
 import com.example.olx.util.SharedPref
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.fragment_inventory.*
+import kotlinx.android.synthetic.main.fragment_my_ads.*
 
 
 class Inventory : BaseFragment() {
@@ -37,11 +38,16 @@ class Inventory : BaseFragment() {
                 for(id in it) {
                     val s = id.toObject(AllOrder::class.java)
                     list.add(s)
-
                 }
+                if(list.size>0){
+                    ll_inventory.visibility=View.GONE
+                }
+                else{
+                    ll_inventory.visibility=View.VISIBLE
+                }
+
                 set()
             }.addOnFailureListener {
-                Log.i("seler",it.message.toString())
                 Toast.makeText(requireContext(),"${it.message}",Toast.LENGTH_LONG).show()
             }
 

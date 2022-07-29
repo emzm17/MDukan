@@ -8,5 +8,6 @@ data class AllOrder(
     var sellerId:String="",
     var status:String="",
     var userId:String="",
-    var username:String=""
+    var username:String="",
+    var image:String=""
 )

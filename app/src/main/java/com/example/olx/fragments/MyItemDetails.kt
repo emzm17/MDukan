@@ -22,7 +22,11 @@ import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.fragment_details.*
 import kotlinx.android.synthetic.main.fragment_details.ll_km_driven
 import kotlinx.android.synthetic.main.fragment_my_item_details.*
+import kotlinx.android.synthetic.main.item_details_2.*
+import java.text.NumberFormat
 import java.text.SimpleDateFormat
+import java.util.*
+import kotlin.collections.ArrayList
 
 
 class MyItemDetails : BaseFragment(),DetailsImageAdapter.itemClickListener {
@@ -49,35 +53,34 @@ class MyItemDetails : BaseFragment(),DetailsImageAdapter.itemClickListener {
         clickListener()
 
     }
+        private fun clickListener() {
+            Mbtndelete.setOnClickListener {
+                 alert()
+            }
+        }
 
-    private fun clickListener() {
-        btndelete.setOnClickListener {
-             alert()
+        private fun alert() {
+            val builder = AlertDialog.Builder(requireContext())
+            builder.setTitle("Remove")
+            builder.setMessage("Are are sure you want to delete your Ad?")
+            builder.setIcon(R.drawable.ic_warning)
+            builder.setPositiveButton("Yes" ){ dialog: DialogInterface, i: Int ->
+                DB.collection(args.sItem.type.toString())
+                    .document(args.sItem.id.toString())
+                    .delete().addOnSuccessListener {
+                        Toast.makeText(requireContext(),"Successfully Remove your Ad",Toast.LENGTH_LONG).show()
+                    }
+                val action=MyItemDetailsDirections.actionMyItemDetails2ToMyAds()
+                findNavController().navigate(action)
+                dialog.dismiss()
+            }
+            builder.setNegativeButton("No"){ dialog:DialogInterface,i:Int->
+                dialog.dismiss()
+            }
+            val alertDialog=builder.create()
+            alertDialog.setCancelable(false)
+            alertDialog.show()
         }
-    }
-
-    private fun alert() {
-        val builder = AlertDialog.Builder(requireContext())
-        builder.setTitle("Remove")
-        builder.setMessage("Are are sure you want to delete your Ad?")
-        builder.setIcon(R.drawable.ic_warning)
-        builder.setPositiveButton("Yes" ){ dialog: DialogInterface, i: Int ->
-            DB.collection(args.sItem.type.toString())
-                .document(args.sItem.id.toString())
-                .delete().addOnSuccessListener {
-                    Toast.makeText(requireContext(),"Successfully Remove your Ad",Toast.LENGTH_LONG).show()
-                }
-            val action=MyItemDetailsDirections.actionMyItemDetails2ToMyAds()
-            findNavController().navigate(action)
-            dialog.dismiss()
-        }
-        builder.setNegativeButton("No"){ dialog:DialogInterface,i:Int->
-            dialog.dismiss()
-        }
-        val alertDialog=builder.create()
-        alertDialog.setCancelable(false)
-        alertDialog.show()
-    }
 
     private fun getItem() {
         showprogress()
@@ -95,21 +98,19 @@ class MyItemDetails : BaseFragment(),DetailsImageAdapter.itemClickListener {
         val list=ArrayList<String>()
         list.add(args.sItem.imagelist.toString())
         val viewadapter= DetailsImageAdapter(requireContext(),list,this)
-        MIidViewPager.adapter=viewadapter
-        MIidViewPager.offscreenPageLimit=1
+        MViewPage.adapter=viewadapter
+        MViewPage.offscreenPageLimit=1
     }
 
     private fun data() {
-        MItvPrice.text = args.sItem.price
-        MItvTitle.text = args.sItem.title
-        MItvBrand.text = args.sItem.brand
-        MItvPhone.text = args.sItem.phone
-        MItvAddress.text = args.sItem.address
-        MItvDescription.text=args.sItem.description
-        MItvKmDriven.text=args.sItem.driven
-
-        MItvYear.text=args.sItem.year
-        McityTv.text=args.sItem.city
+        val sdf= SimpleDateFormat("dd/MM/yyyy")
+        MtvItemPrice.text= NumberFormat.getCurrencyInstance(Locale("en", "IN")).format(args.sItem.price!!.toInt())
+        MtvItemTitle.text=args.sItem.brand+"  "+args.sItem.title.toString()
+        MtvItemTown.text=args.sItem.city
+        MtvItemState.text="Jharkhand"
+        MtvDescriptionList.text=args.sItem.description
+        MtvAddressList.text=args.sItem.address
+        MtvYearPurchase.text=sdf.format(args.sItem.createdAt!!.time)
     }
 
     override fun onItemClick(position: Int) {

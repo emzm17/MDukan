@@ -15,13 +15,16 @@ import com.example.olx.util.Constants
 import com.example.olx.util.SharedPref
 import kotlinx.android.synthetic.main.ads_item.view.*
 import kotlinx.android.synthetic.main.griditem.view.*
+import kotlinx.android.synthetic.main.item_details_3.view.*
+import java.text.NumberFormat
 import java.text.SimpleDateFormat
+import java.util.*
 
 class AdAdapter(private val context: Context, private var myList:MutableList<SItem>, private var listener:ItemClickListener):
     RecyclerView.Adapter<AdAdapter.AdAdapterViewModel>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AdAdapter.AdAdapterViewModel {
-        val v= LayoutInflater.from(context).inflate(R.layout.ads_item,parent,false)
+        val v= LayoutInflater.from(context).inflate(R.layout.item_details_3,parent,false)
         return AdAdapterViewModel(v)
     }
 
@@ -48,11 +51,12 @@ class AdAdapter(private val context: Context, private var myList:MutableList<SIt
 
         @SuppressLint("SetTextI18n")
         fun bind(item: SItem)=with(itemView){
-            itemView.spriceTv.text="₹ ${item.price}"
-            itemView.sbrandTv.text=item.brand
-            itemView.syearTv.text=item.year
-            itemView.scityTv.text=item.city
-            Glide.with(context).load(item.imagelist).placeholder(R.drawable.ic_placeholder).into(itemView.sell_imageview)
+            itemView.tvPrice.text= NumberFormat.getCurrencyInstance(Locale("en", "IN")).format(item.price!!.toInt())
+            itemView.tvDetails.text=item.brand!!.capitalize()
+            itemView.tvSeller.text=item.user_name
+            itemView.tvcity.text=item.city
+            Glide.with(this).load(item.imagelist).placeholder(R.drawable.ic_placeholder).into(itemView.ImageViewItem);
+      
 
         }
     }

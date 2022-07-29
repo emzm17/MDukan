@@ -22,7 +22,6 @@ import com.example.olx.util.OnActivityResult
 import com.example.olx.util.SharedPref
 import com.google.firebase.firestore.FirebaseFirestore
 import com.razorpay.Checkout
-import kotlinx.android.synthetic.main.fragment_cart.*
 import kotlinx.android.synthetic.main.fragment_checkout.*
 import org.json.JSONObject
 
@@ -126,10 +125,17 @@ class Checkout : Fragment() {
 
     }
     private fun upload() {
-             saveData(args.cartItem.brand,args.cartItem.price,args.cartItem.user_id,args.cartItem.productid,args.cartItem.seller_name)
+             saveData(args.cartItem.brand,args.cartItem.price,args.cartItem.user_id,args.cartItem.productid,args.cartItem.seller_name,args.cartItem.imagelist)
     }
 
-    private fun saveData(name: String, price: String,sellerID:String, id: String,sellername:String) {
+    private fun saveData(
+        name: String,
+        price: String,
+        sellerID: String,
+        id: String,
+        sellername: String,
+        imagelist: String
+    ) {
             val data= hashMapOf<String,Any>()
              data["name"]=name
              data["price"]= price
@@ -137,6 +143,7 @@ class Checkout : Fragment() {
              data["status"]="Ordered"
              data["sellerId"]=sellerID
              data["sellerName"]=sellername
+             data["image"]=imagelist
              data["userId"]=SharedPref(requireContext()).getString(Constants.USER_ID).toString()
              val key=DB.collection("AllOrders").document().id
              data["OrderId"]=key

@@ -28,7 +28,7 @@
     <string name="description">Description</string>
     <string name="phone">Phone</string>
     <string name="version_1_0">version 1.0</string>
-    <string name="you_havent_t_list_anything">You havent\'t List Anything</string>
+    <string name="you_havent_t_list_anything">You havent\'t Post Anything</string>
     <string name="let_s_go">Let\'s go</string>
     <string name="north_office_para_ranchi">North Office Para,Ranchi</string>
     <string name="_10_00_000">₹ 10,00,000</string>
@@ -39,5 +39,7 @@
     <string name="billing_section">Billing Section</string>
     <string name="proceed_for_payment">Proceed For payment</string>
     <string name="status_ordered">Status: Ordered</string>
+    <string name="no_order_received_yet">No Order received Yet</string>
+    <string name="you_haven_t_order_yet_anything">You Haven\'t order Yet</string>
 
 </resources>

@@ -1,329 +1,233 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/btndelete"
-        android:layout_marginTop="4dp"
-        android:fillViewport="true">
+        android:layout_weight="6">
 
-
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="wrap_content">
 
-            <FrameLayout
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/MViewPage"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_250"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center">
+                android:background="@android:color/transparent"
+                app:layout_constraintBottom_toBottomOf="@id/MViewPage"
+                app:tabBackground="@drawable/image_selector"
+                app:tabGravity="center" />
 
-                <androidx.viewpager.widget.ViewPager
-                    android:id="@+id/MIidViewPager"
-                    android:layout_width="400dp"
-                    android:layout_height="300dp"
-                    android:layout_gravity="center"
-                    android:layout_margin="10dp" />
-            </FrameLayout>
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:orientation="vertical">
-
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/MItvPrice"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="4dp"
-                    android:text="@string/_100_00"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                    android:textColor="@android:color/black"
-                    android:textStyle="bold" />
-
-
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/MItvTitle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="4dp"
-
-                    android:maxLines="1"
-                    android:textStyle="bold"
-                    android:text="North Office Para,Ranchi"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:textColor="@android:color/black">
-
-                </androidx.appcompat.widget.AppCompatTextView>
-
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/MItvBrand"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="4dp"
-                    android:maxLines="1"
-                    android:text="Audi"
-                    android:textStyle="bold"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:textColor="@android:color/black">
-
-                </androidx.appcompat.widget.AppCompatTextView>
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <ImageView
-                        android:src="@drawable/ic_location"
-                        android:layout_width="wrap_content"
-                        android:layout_gravity="bottom"
-                        android:layout_marginBottom="5dp"
-                        android:layout_height="19dp"/>
-                    <androidx.appcompat.widget.AppCompatTextView
-                        android:id="@+id/McityTv"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                        android:textColor="@color/black"
-                        android:text="Yesterday"
-                        android:textStyle="bold"
-                        android:layout_marginStart="4dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="@android:color/darker_gray" />
-
-            <androidx.appcompat.widget.AppCompatTextView
+            <TextView
+                android:id="@+id/MtvItemPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:text="@string/details"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="@android:color/black"
-                android:textStyle="bold">
+                android:layout_margin="@dimen/dp_10"
+                android:fontFamily="@font/sniglet"
+                android:text="₹ 8,75,000"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_25"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/MViewPage" />
 
-            </androidx.appcompat.widget.AppCompatTextView>
-
-            <androidx.appcompat.widget.LinearLayoutCompat
-                android:id="@+id/ll_km_driven"
+            <TextView
+                android:id="@+id/MtvItemTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:orientation="horizontal"
-                android:visibility="gone">
+                android:layout_margin="@dimen/dp_10"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/sniglet"
+                android:text="Toyota Innova 2.5 (Diesel) 7 Seater BS IV, 2013, Diesel"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_20"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/MtvItemPrice" />
 
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginStart="4dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_toEndOf="@+id/imageViewLocation"
-                    android:maxLines="1"
-                    android:text="KM Driven"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small">
-
-                </androidx.appcompat.widget.AppCompatTextView>
-
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/MItvKmDriven"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginStart="4dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_toEndOf="@+id/imageViewLocation"
-                    android:gravity="end"
-                    android:maxLines="1"
-                    android:text="@string/phase_6_mohali_sector_56"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                    android:textColor="@android:color/black">
-
-                </androidx.appcompat.widget.AppCompatTextView>
+            <TextView
+                android:id="@+id/MtvItemDriven"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_10"
+                android:text="10000 KM"
+                android:visibility="gone"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_15"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/MtvItemTitle" />
+            <TextView
+                android:id="@+id/MtvYearPurchase"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_10"
+                android:text="15 July 2022"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_15"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/MtvItemDriven" />
 
 
-            </androidx.appcompat.widget.LinearLayoutCompat>
+            <ImageView
+                android:id="@+id/MimgLocation"
+                android:layout_width="@dimen/dp_20"
+                android:layout_height="@dimen/dp_20"
+                android:layout_margin="@dimen/dp_10"
+                android:src="@drawable/ic_location"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/MtvYearPurchase" />
 
-            <androidx.appcompat.widget.LinearLayoutCompat
+            <TextView
+                android:id="@+id/MtvItemTown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_10"
+                android:fontFamily="@font/sniglet"
+                android:text="Ranchi,"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_15"
+                app:layout_constraintStart_toEndOf="@id/MimgLocation"
+                app:layout_constraintTop_toBottomOf="@id/MtvYearPurchase" />
+
+            <TextView
+                android:id="@+id/MtvItemState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_10"
+                android:fontFamily="@font/sniglet"
+                android:text="Jharkhand"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_15"
+                app:layout_constraintStart_toEndOf="@id/MtvItemTown"
+                app:layout_constraintTop_toBottomOf="@id/MtvYearPurchase"/>
+
+            <View
+                android:id="@+id/MviewLine"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_margin="@dimen/dp_15"
+                android:background="@color/gray"
+                app:layout_constraintTop_toBottomOf="@id/MimgLocation" />
+
+            <TextView
+                android:id="@+id/MtvDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:orientation="horizontal">
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:fontFamily="@font/sniglet"
+                android:text="Description :"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_25"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/MviewLine" />
 
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginStart="4dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_toEndOf="@+id/imageViewLocation"
-                    android:maxLines="1"
-                    android:text="Address"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                    android:textColor="@color/black">
-
-                </androidx.appcompat.widget.AppCompatTextView>
-
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/MItvAddress"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginStart="4dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_toEndOf="@+id/imageViewLocation"
-                    android:gravity="end"
-                    android:text="North Office Para,Ranchi"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                    android:textColor="@android:color/black">
-
-                </androidx.appcompat.widget.AppCompatTextView>
-
-
-            </androidx.appcompat.widget.LinearLayoutCompat>
-
-            <androidx.appcompat.widget.LinearLayoutCompat
+            <TextView
+                android:id="@+id/MtvDescriptionList"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:orientation="horizontal">
-
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginStart="4dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_toEndOf="@+id/imageViewLocation"
-                    android:maxLines="1"
-                    android:text="@string/description"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                    android:textColor="@color/black">
-
-                </androidx.appcompat.widget.AppCompatTextView>
-
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/MItvDescription"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginStart="4dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_toEndOf="@+id/imageViewLocation"
-                    android:gravity="end"
-                    android:text="North Office Para,Ranchi"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                    android:textColor="@android:color/black">
-
-                </androidx.appcompat.widget.AppCompatTextView>
-
-
-            </androidx.appcompat.widget.LinearLayoutCompat>
-
-            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_margin="10dp"
+                android:fontFamily="@font/sniglet"
+                android:text="Additional Information"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_15"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/MtvDescription" />
+            <TextView
+                android:id="@+id/MtvAddress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:orientation="horizontal">
-
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginStart="4dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_toEndOf="@+id/imageViewLocation"
-                    android:maxLines="1"
-                    android:text="@string/phone"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                    android:textColor="@color/black">
-
-                </androidx.appcompat.widget.AppCompatTextView>
-
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/MItvPhone"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginStart="4dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_toEndOf="@+id/imageViewLocation"
-                    android:gravity="end"
-                    android:text="North Office Para,Ranchi"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                    android:textColor="@android:color/black">
-
-                </androidx.appcompat.widget.AppCompatTextView>
-
-
-            </androidx.appcompat.widget.LinearLayoutCompat>
-
-            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:fontFamily="@font/sniglet"
+                android:text="Address"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_25"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/MtvDescriptionList" />
+            <TextView
+                android:id="@+id/MtvAddressList"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:orientation="horizontal">
+                android:layout_margin="10dp"
+                android:fontFamily="@font/sniglet"
+                android:text="322 New Housing Colony,Gandhi Nagar New Delhi"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_15"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/MtvAddress" />
+            <TextView
+                android:id="@+id/MtvPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:fontFamily="@font/sniglet"
+                android:text="Phone"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_25"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/MtvAddressList" />
+            <TextView
+                android:id="@+id/MtvPhoneList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/sniglet"
+                android:text="9892783241"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_15"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/MtvPhone" />
 
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginStart="4dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_toEndOf="@+id/imageViewLocation"
-                    android:maxLines="1"
-                    android:text="Year"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                    android:textColor="@color/black">
-
-                </androidx.appcompat.widget.AppCompatTextView>
-
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/MItvYear"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginStart="4dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_toEndOf="@+id/imageViewLocation"
-                    android:gravity="end"
-                    android:text="@string/north_office_para_ranchi"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                    android:textColor="@color/black">
-
-                </androidx.appcompat.widget.AppCompatTextView>
 
 
-            </androidx.appcompat.widget.LinearLayoutCompat>
-        </LinearLayout>
-
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/btndelete"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:background="@color/colorPrimaryDark"
-        android:gravity="center"
-        android:padding="12dp"
-        android:text="Delete"
-        android:textAllCaps="true"
-        android:textAppearance="@style/TextAppearance.AppCompat.Small"
-        android:textColor="@android:color/white"
-        android:textStyle="bold" />
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/Mbtndelete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="Delete"
+            android:textAllCaps="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
 
 
-</RelativeLayout>
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

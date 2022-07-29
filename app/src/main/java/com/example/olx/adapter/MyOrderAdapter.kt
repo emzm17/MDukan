@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.olx.R
 import com.example.olx.modal.AllOrder
 import com.google.firebase.firestore.FirebaseFirestore
@@ -18,7 +19,7 @@ import java.util.*
 class MyOrderAdapter(private val context: Context, private var list:List<AllOrder>): RecyclerView.Adapter<MyOrderAdapter.MyOrderViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int):MyOrderViewHolder {
-        val v= LayoutInflater.from(context).inflate(R.layout.item_inventory,parent,false)
+        val v= LayoutInflater.from(context).inflate(R.layout.order_item,parent,false)
         return MyOrderViewHolder(v)
     }
 
@@ -32,10 +33,11 @@ class MyOrderAdapter(private val context: Context, private var list:List<AllOrde
     inner class MyOrderViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
         @SuppressLint("SetTextI18n", "ResourceAsColor")
         fun bind(item: AllOrder)=with(itemView){
-            MyproductTitle.text= {item.name}.toString()
+            MyproductTitle.text=item.name
             MyproductPrice.text= NumberFormat.getCurrencyInstance(Locale("en", "IN")).format(item.price.toInt())
             MyproductId.text="OrderId: ${item.OrderId}"
             MyproductStatus.text="Status: ${item.status}"
+            Glide.with(context).load(item.image).placeholder(R.drawable.ic_placeholder).into(myorderImage)
             MyBtnCancel.setOnClickListener {
                 updatestatus("Canceled",item.OrderId)
             }

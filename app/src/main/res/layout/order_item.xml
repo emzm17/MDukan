@@ -1,8 +1,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_margin="5dp"
-    android:padding="12dp"
+    android:layout_margin="2dp"
+    android:padding="5dp"
+    android:background="#ECECEC"
     android:orientation="vertical"
     android:layout_height="wrap_content">
 
@@ -15,12 +16,14 @@
 
 
         <ImageView
-            android:layout_width="150dp"
-            android:layout_margin="5dp"
-            android:layout_height="122dp"/>
+            android:id="@+id/myorderImage"
+            android:layout_width="130dp"
+            android:layout_marginRight="5dp"
+            android:layout_height="130dp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
+
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
