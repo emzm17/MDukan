@@ -9,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ShareActionProvider
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
 import com.example.olx.BaseFragment
@@ -41,6 +42,8 @@ class Profile : BaseFragment() ,View.OnClickListener{
     private fun clicklistener() {
         llsettings.setOnClickListener(this)
         lllogout.setOnClickListener(this)
+        llMyInventory.setOnClickListener(this)
+        llMyOrder.setOnClickListener(this)
     }
 
     private fun setData() {
@@ -57,6 +60,14 @@ class Profile : BaseFragment() ,View.OnClickListener{
             R.id.llsettings->{
                   val action=ProfileDirections.actionProfileToSettings()
                   findNavController().navigate(action)
+            }
+            R.id.llMyInventory->{
+                val action=ProfileDirections.actionProfileToInventory()
+                findNavController().navigate(action)
+            }
+            R.id.llMyOrder->{
+                val action=ProfileDirections.actionProfileToOrder()
+                findNavController().navigate(action)
             }
         }
     }

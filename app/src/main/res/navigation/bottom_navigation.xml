@@ -22,6 +22,12 @@
         <action
             android:id="@+id/action_Profile_to_settings"
             app:destination="@id/settings" />
+        <action
+            android:id="@+id/action_Profile_to_inventory"
+            app:destination="@id/inventory" />
+        <action
+            android:id="@+id/action_Profile_to_order"
+            app:destination="@id/order" />
     </fragment>
     <fragment
         android:id="@+id/Sell"
@@ -76,6 +82,9 @@
         <argument
             android:name="sItem"
             app:argType="com.example.olx.modal.SItem" />
+        <action
+            android:id="@+id/action_details_to_cart"
+            app:destination="@id/Cart" />
     </fragment>
     <fragment
         android:id="@+id/browseItem"
@@ -91,6 +100,7 @@
     </fragment>
     <fragment
         android:id="@+id/settings"
+        tools:layout="@layout/fragment_settings"
         android:name="com.example.olx.fragments.Settings"
         android:label="Settings" >
         <action
@@ -112,6 +122,41 @@
             android:id="@+id/action_myItemDetails2_to_MyAds"
             app:destination="@id/MyAds" />
     </fragment>
+    <fragment
+        android:id="@+id/Cart"
+        android:name="com.example.olx.fragments.Cart"
+        android:label="MyCart"
+        tools:layout="@layout/fragment_cart" >
+        <action
+            android:id="@+id/action_cart_to_details"
+            app:destination="@id/details" />
+        <action
+            android:id="@+id/action_cart_to_checkout"
+            app:destination="@id/checkout" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/checkout"
+        android:name="com.example.olx.fragments.Checkout"
+        android:label="fragment_checkout"
+        tools:layout="@layout/fragment_checkout" >
+        <argument
+            android:name="cart_item"
+            app:argType="com.example.olx.room.ProductModel" />
+        <action
+            android:id="@+id/action_checkout_to_Home"
+            app:destination="@id/Home" />
+    </fragment>
+    <fragment
+        android:id="@+id/inventory"
+        android:name="com.example.olx.fragments.Inventory"
+        android:label="MyInventory"
+        tools:layout="@layout/fragment_inventory" />
+    <fragment
+        android:id="@+id/order"
+        android:name="com.example.olx.fragments.Order"
+        android:label="MyOrder"
+        tools:layout="@layout/fragment_order" />
 
 
 </navigation>

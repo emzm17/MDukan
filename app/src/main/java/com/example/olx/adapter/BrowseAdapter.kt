@@ -15,7 +15,9 @@ import com.example.olx.util.SharedPref
 import kotlinx.android.synthetic.main.ads_item.view.*
 import kotlinx.android.synthetic.main.all_item_list.view.*
 import kotlinx.android.synthetic.main.item_details_3.view.*
+import java.text.NumberFormat
 import java.text.SimpleDateFormat
+import java.util.*
 
 
 class BrowseAdapter(private val context: Context, private var myList: MutableList<SItem>, private var listener:ItemClickListener):
@@ -48,11 +50,10 @@ class BrowseAdapter(private val context: Context, private var myList: MutableLis
 
         @SuppressLint("SetTextI18n")
         fun bind(item: SItem)=with(itemView){
-             itemView.tvPrice.text="₹${item.price}"
+             itemView.tvPrice.text= NumberFormat.getCurrencyInstance(Locale("en", "IN")).format(item.price!!.toInt())
              itemView.tvDetails.text=item.brand!!.capitalize()
-             itemView.tvYear.text=item.year+"-Till Now"
-             itemView.tvcity.text=item.city+","
-             itemView.tvState.text="Jharkhand"
+             itemView.tvSeller.text=item.user_name
+             itemView.tvcity.text=item.city
             Glide.with(this).load(item.imagelist).into(itemView.ImageViewItem);
         }
     }

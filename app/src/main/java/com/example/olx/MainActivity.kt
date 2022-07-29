@@ -20,6 +20,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.olx.util.Constants
+import com.example.olx.util.OnActivityResult
 import com.example.olx.util.OnActivityResultData
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
@@ -27,15 +28,19 @@ import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.razorpay.Checkout
+import com.razorpay.PaymentResultListener
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
+import org.json.JSONObject
 import java.io.File
 import java.lang.Exception
 
 
-class MainActivity : BaseActivity(){
+class MainActivity : BaseActivity(),PaymentResultListener {
     lateinit var onActivityResultData: OnActivityResultData
+    lateinit var onActivityResult:OnActivityResult
     private lateinit var navController: NavController
     private lateinit var bottomNavigationView: BottomNavigationView
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -48,9 +53,27 @@ class MainActivity : BaseActivity(){
         setupActionBarWithNavController(navController,appBarConfiguration)
         bottomNavigationView = findViewById(R.id.bottom_navigation_view)
         bottomNavigationView.setupWithNavController(navController)
-       
+
     }
 
+
+    override fun onPaymentSuccess(p0: String?) {
+           Toast.makeText(this,"Payment is Successfull",Toast.LENGTH_LONG).show()
+           val bundle=Bundle()
+           bundle.putString("PAYMENT","Success")
+           onActivityResult.result(bundle)
+
+    }
+
+    override fun onPaymentError(p0: Int, p1: String?) {
+             Toast.makeText(this,"Something went wrong",Toast.LENGTH_LONG).show()
+             val bundle=Bundle()
+             bundle.putString("PAYMENT","Fail")
+             onActivityResult.result(bundle)
+    }
+    fun getResult(onActivityResult: OnActivityResult){
+         this.onActivityResult=onActivityResult
+    }
     override fun onSupportNavigateUp(): Boolean {
          return navController.navigateUp() || super.onSupportNavigateUp()
     }
@@ -80,4 +103,6 @@ class MainActivity : BaseActivity(){
                     }
 
               }
+
+
 }

@@ -217,7 +217,7 @@
             android:layout_weight="1">
 
             <TextView
-                android:id="@+id/ChatBtnText"
+                android:id="@+id/btnCHAT"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dp_20"
@@ -242,7 +242,7 @@
             android:layout_weight="1">
 
             <TextView
-                android:id="@+id/NavigationBtnText"
+                android:id="@+id/btnADD"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dp_20"
@@ -252,7 +252,7 @@
                 android:background="@color/colorPrimary"
                 android:fontFamily="@font/sniglet"
                 android:padding="@dimen/dp_5"
-                android:text="Add to Bag"
+                android:text="Add To Cart"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="@dimen/sp_20"

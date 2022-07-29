@@ -47,6 +47,7 @@ class MyItemDetails : BaseFragment(),DetailsImageAdapter.itemClickListener {
         }
         getItem()
         clickListener()
+
     }
 
     private fun clickListener() {

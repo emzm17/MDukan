@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.Checkout"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="12dp"
+        android:id="@+id/inputlayout"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:hint="@string/user_name"
+        android:textColorHint="@color/DarkGrey"
+        app:hintTextColor="@color/DarkGrey"
+        android:layout_margin="5dp"
+        android:layout_height="wrap_content">
+    <com.google.android.material.textfield.TextInputEditText
+        android:layout_width="match_parent"
+        android:id="@+id/user_nameEt"
+        android:textColor="@color/black"
+        android:fontFamily="@font/sniglet"
+        android:inputType="text"
+        android:layout_height="wrap_content">
+    </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:hint="Phone Number"
+        android:layout_margin="5dp"
+        android:textColorHint="@color/DarkGrey"
+        app:hintTextColor="@color/DarkGrey"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:id="@+id/user_phoneEt"
+            android:textColor="@color/black"
+            android:fontFamily="@font/sniglet"
+            android:inputType="number"
+            android:layout_height="wrap_content">
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:hint="Address"
+        android:layout_margin="5dp"
+        android:textColorHint="@color/DarkGrey"
+        app:hintTextColor="@color/DarkGrey"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:id="@+id/user_addressEt"
+            android:textColor="@color/black"
+            android:fontFamily="@font/sniglet"
+            android:inputType="text"
+            android:layout_height="wrap_content">
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:hint="Pincode"
+        android:layout_margin="5dp"
+        android:textColorHint="@color/DarkGrey"
+        app:hintTextColor="@color/DarkGrey"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:id="@+id/user_pincodeEt"
+            android:textColor="@color/black"
+            android:fontFamily="@font/sniglet"
+            android:inputType="number"
+            android:layout_height="wrap_content">
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:hint="State"
+        android:layout_margin="5dp"
+        android:textColorHint="@color/DarkGrey"
+        app:hintTextColor="@color/DarkGrey"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:id="@+id/user_stateEt"
+            android:textColor="@color/black"
+            android:fontFamily="@font/sniglet"
+            android:inputType="text"
+            android:layout_height="wrap_content">
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <View
+        android:id="@+id/viewLine"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_margin="@dimen/dp_10"
+        android:background="@color/gray"/>
+
+    <TextView
+        android:text="@string/billing_section"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/sniglet"
+        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <RadioGroup
+        android:layout_marginTop="10dp"
+        android:id="@+id/groupradio"
+        android:layout_marginLeft="10dp"
+        android:layout_width="fill_parent"
+
+        android:layout_height="wrap_content">
+    <RadioButton
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/radia_id1"
+        android:fontFamily="@font/sniglet"
+        android:layout_margin="10dp"
+        android:text="Online"
+        android:textColor="@color/black"
+        android:textSize="25sp"/>
+
+    <RadioButton
+        android:layout_margin="10dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sniglet"
+        android:textColor="@color/black"
+        android:id="@+id/radia_id2"
+        android:text="Cash on Delivery"
+        android:textSize="25sp"/>
+    </RadioGroup>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/BTNpayment"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="Place Your Order" />
+
+
+</RelativeLayout>
