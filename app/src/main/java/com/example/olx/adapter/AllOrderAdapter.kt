@@ -2,6 +2,7 @@ package com.example.olx.adapter
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.content.res.ColorStateList
 import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
@@ -37,8 +38,12 @@ class AllOrderAdapter(private val context: Context, private var list:List<AllOrd
                 productId.text="Item OrderId: ${item.OrderId}"
 
                  cancelBTN.setOnClickListener {
-                    ProceedBTN.isEnabled=false
+                     ProceedBTN.isEnabled=false
+                     ProceedBTN.text="Ordered Canceled"
+                     ProceedBTN.setBackgroundTintList(ColorStateList.valueOf(R.color.dark_gray))
                      updatestatus("Canceled",item.OrderId)
+                     cancelBTN.isEnabled=false
+                     cancelBTN.setBackgroundTintList(ColorStateList.valueOf(R.color.dark_gray))
                  }
                 when(item.status){
                     "Ordered"->{
@@ -56,9 +61,15 @@ class AllOrderAdapter(private val context: Context, private var list:List<AllOrd
                     }
                     "Delivered"->{
                         ProceedBTN.text="Already Delivered"
+                        ProceedBTN.isEnabled=false
                         cancelBTN.isEnabled=false
-                       cancelBTN.setBackgroundColor(R.color.dark_gray)
+                        cancelBTN.setBackgroundTintList(ColorStateList.valueOf(R.color.dark_gray))
                     }
+                    "Canceled"->{
+                         ProceedBTN.isEnabled=false
+                         ProceedBTN.setBackgroundTintList(ColorStateList.valueOf(R.color.dark_gray))
+                    }
+
                 }
              }
     }

@@ -47,7 +47,6 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:text="Cancel"
                 android:id="@+id/cancelBTN"
-                android:visibility="visible"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:layout_marginRight="6dp"
@@ -63,6 +62,7 @@
                 app:backgroundTint="@color/colorPrimaryDark"
                 android:textColor="@color/white"
                 android:layout_marginLeft="6dp"
+                android:enabled="true"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_width="0dp"/>

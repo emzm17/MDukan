@@ -38,21 +38,18 @@ class SplashActivity:BaseActivity() {
         fusedlocationclient=LocationServices.getFusedLocationProviderClient(this)
         getCurrentlocation()
     }
-    internal val mRunnable: Runnable = Runnable {
-        if (!isFinishing) {
-            if (SharedPref(this).getString(Constants.USER_ID)!!.isEmpty()) {
-                val intent = Intent(applicationContext, LoginActivity::class.java)
-                startActivity(intent)
-                finish()
-            } else {
-                val intent = Intent(applicationContext, MainActivity::class.java)
-                startActivity(intent)
-                finish()
-            }
-        }
+    override fun onResume() {
+        super.onResume()
+
+
     }
 
-
+    override fun onRestart() {
+        super.onRestart()
+        if(SharedPref(this).getString(Constants.CITY_NAME)==null){
+            getCurrentlocation()
+        }
+    }
 
 
 
@@ -85,18 +82,32 @@ class SplashActivity:BaseActivity() {
                     }
                     else{
                             SharedPref(this).setString(Constants.CITY_NAME,getCityName(location).toString())
-                            handler.postDelayed(
-                            mRunnable,
-                           3000
-                        )
+                            handler.postDelayed({
+                                if (!isFinishing) {
+                                    if (SharedPref(this).getString(Constants.USER_ID)!!.isEmpty()) {
+                                        val intent = Intent(applicationContext, LoginActivity::class.java)
+                                        startActivity(intent)
+                                        finish()
+                                    } else {
+                                        val intent = Intent(applicationContext, MainActivity::class.java)
+                                        startActivity(intent)
+                                        finish()
+                                    }
+                                }
+                    },
+                           3000)
 
                     }
                 }
               }
               else{
-                   Toast.makeText(this,"Turn on Location",Toast.LENGTH_LONG).show()
-                   val intent=Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS)
-                   startActivity(intent)
+
+                   Toast.makeText(this,"Turn on Location and Restart your App",Toast.LENGTH_LONG).show()
+                   handler.postDelayed({
+                       val intent=Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS)
+                       startActivity(intent)
+                   },3000)
+
               }
          }
          else{
@@ -114,13 +125,7 @@ class SplashActivity:BaseActivity() {
     }
 
 
-    override fun onResume() {
-        super.onResume()
-        if(SharedPref(this).getString(Constants.CITY_NAME)==null){
-            getCurrentlocation()
-        }
 
-    }
 
     private fun askpermission() {
           ActivityCompat.requestPermissions(this,

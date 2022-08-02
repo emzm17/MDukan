@@ -138,7 +138,7 @@
     <fragment
         android:id="@+id/checkout"
         android:name="com.example.olx.fragments.Checkout"
-        android:label="fragment_checkout"
+        android:label="Checkout"
         tools:layout="@layout/fragment_checkout" >
         <argument
             android:name="cart_item"

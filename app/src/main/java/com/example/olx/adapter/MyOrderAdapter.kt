@@ -2,6 +2,7 @@ package com.example.olx.adapter
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.content.res.ColorStateList
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -40,6 +41,8 @@ class MyOrderAdapter(private val context: Context, private var list:List<AllOrde
             Glide.with(context).load(item.image).placeholder(R.drawable.ic_placeholder).into(myorderImage)
             MyBtnCancel.setOnClickListener {
                 updatestatus("Canceled",item.OrderId)
+                MyBtnCancel.isEnabled=false
+                MyBtnCancel.setBackgroundTintList(ColorStateList.valueOf(R.color.dark_gray))
             }
             when(item.status){
                 "Ordered"->{
