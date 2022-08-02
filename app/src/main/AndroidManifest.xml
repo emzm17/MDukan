@@ -38,7 +38,7 @@
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyDFJ1-dQp0yDcgUS02PfD3yCoFrldyIDa8" />
+            android:value="${GMP_KEY}" />
 
         <activity
             android:name=".ImagePreview"
